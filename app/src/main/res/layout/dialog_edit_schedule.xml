@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        style="@style/Dialog.Title"
+        android:layout_width="match_parent"
+        android:text="    일정 수정" />
+
+    <EditText
+        android:id="@+id/edit_schedule_title"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:hint="일정명"
+        android:maxLength="20"
+        android:inputType="text"
+        />
+
+    <EditText
+        android:id="@+id/edit_schedule_place"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:hint="장소명"
+        android:maxLength="12"
+        android:inputType="text"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+
+        <android.widget.Button
+            android:id="@+id/edit_time_button"
+            style="@style/Button.DialogLightBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:text="시간 (선택)"
+            android:textSize="16sp"
+            android:padding="8dp"/>
+
+        <android.widget.Button
+            android:id="@+id/edit_time_reset_button"
+            style="@style/Button.DialogLightBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="시간 초기화"
+            android:textSize="16sp"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <android.widget.Button
+            android:id="@+id/edit_cancel_button"
+            style="@style/Button.DialogGray"
+            android:layout_width="135dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:text="취소"
+            />
+        <android.widget.Button
+            android:id="@+id/edit_update_button"
+            style="@style/Button.DialogMediumBlue"
+            android:layout_width="135dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:text="일정 수정"
+            />
+    </LinearLayout>
+</LinearLayout>

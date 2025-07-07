@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navigationBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:elevation="4dp">
+
+    <!-- Home Tab -->
+    <LinearLayout
+        android:id="@+id/homeTap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="10dp">
+        <ImageView
+            android:id="@+id/homeIcon"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/home" />
+    </LinearLayout>
+
+    <!-- Calendar Tab -->
+    <LinearLayout
+        android:id="@+id/CalendarTap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="10dp">
+        <ImageView
+            android:id="@+id/CalendarIcon"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/calendar" />
+    </LinearLayout>
+
+    <!-- Friends Tab -->
+    <LinearLayout
+        android:id="@+id/FriendsTap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="10dp">
+        <ImageView
+            android:id="@+id/FriendsIcon"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/friends" />
+    </LinearLayout>
+
+    <!-- Record Tab -->
+    <LinearLayout
+        android:id="@+id/RecordTap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="10dp">
+        <ImageView
+            android:id="@+id/RecordIcon"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/record" />
+    </LinearLayout>
+
+    <!-- Setting Tab -->
+    <LinearLayout
+        android:id="@+id/SettingsTap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/SettingsIcon"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/settings" />
+    </LinearLayout>
+
+</LinearLayout>

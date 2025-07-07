@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        style="@style/Dialog.Title"
+        android:layout_width="match_parent"
+        android:text="    할 일 삭제" />
+
+    <TextView
+        android:id="@+id/todo_Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="할 일 이름"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="할 일을 삭제하시겠습니까? "
+        android:textSize="17sp"
+        android:textColor="#000000"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <android.widget.Button
+            android:id="@+id/cancel_button"
+            style="@style/Button.DialogGray"
+            android:layout_width="135dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:text="취소"
+            />
+        <android.widget.Button
+            android:id="@+id/save_button"
+            style="@style/Button.DialogRed"
+            android:layout_width="135dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:text="삭제"
+            />
+    </LinearLayout>
+</LinearLayout>

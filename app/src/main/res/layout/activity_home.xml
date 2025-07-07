@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ssutudy_big" />
+
+    <!-- 구분선 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginVertical="5dp"
+        android:background="#c7c7c7"/>
+
+
+    <!-- 오늘 수업 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#64ccc9"
+        android:padding="8dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="오늘\n수업은"
+            android:layout_gravity="center_vertical"
+            android:textSize="17sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="#64ccc9"
+            android:gravity="center"
+            android:layout_marginRight="5dp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:layout_marginRight="8dp"
+            android:padding="4dp">
+
+            <!-- RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/class_schedule_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+            <!-- Empty View -->
+            <TextView
+                android:id="@+id/class_schedule_empty_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:layout_gravity="start"
+                android:paddingLeft="8dp"
+                android:text="축하합니다!\n쉬는 날이네요!"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+
+
+<!--    &lt;!&ndash; D-day 레이아웃 &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:background="#33C2E2"-->
+<!--        android:layout_marginLeft="8dp"-->
+<!--        android:layout_marginRight="8dp"-->
+<!--        android:padding="8dp"-->
+<!--        android:layout_marginBottom="8dp">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/dDayText"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="D-3"-->
+<!--            android:textSize="23dp"-->
+<!--            android:textColor="#FFFFFF"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:background="#33C2E2"-->
+<!--            android:layout_marginRight="5dp"-->
+<!--            android:gravity="center"/>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="2dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="#FFFFFF"-->
+<!--            android:orientation="vertical"-->
+<!--            android:padding="4dp">-->
+
+<!--            &lt;!&ndash; 과목 이름 TextView &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/dDaysubjectName"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="start"-->
+<!--                android:paddingLeft="8dp"-->
+<!--                android:paddingTop="4dp"-->
+<!--                android:text="사용자 인터페이스 및 실습"-->
+<!--                android:textColor="#555555"-->
+<!--                android:textSize="14sp" />-->
+
+<!--            &lt;!&ndash; 수업 상태 TextView &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/dDayContent"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="start"-->
+<!--                android:paddingLeft="8dp"-->
+<!--                android:paddingBottom="4dp"-->
+<!--                android:text="11주차 프로젝트 진도 보고서"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="16sp"-->
+<!--                android:textStyle="bold" />-->
+<!--        </LinearLayout>-->
+<!--    </LinearLayout>-->
+
+    <!-- 오늘 일정 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/light_blue"
+        android:padding="8dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="오늘\n일정은"
+            android:layout_gravity="center_vertical"
+            android:textSize="17sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="@color/light_blue"
+            android:gravity="center"
+            android:layout_marginRight="5dp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:layout_marginRight="8dp"
+            android:padding="4dp">
+
+            <!-- Empty View -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_schedule_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+            <TextView
+                android:id="@+id/home_schedule_empty_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:layout_gravity="start"
+                android:paddingLeft="8dp"
+                android:text="일정이 없습니다."
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- 할 일 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/medium_blue"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginRight="5dp"
+            android:background="@color/medium_blue"
+            android:padding="7dp"
+            android:text="할 일"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="4dp"
+            android:layout_marginLeft="2dp"
+            android:background="#FFFFFF">
+
+            <TextView
+                android:id="@+id/emptyTodoView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="오늘은 남은 할 일이 없습니다!"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/progressText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:paddingLeft="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp"
+                android:text="남은 할 일"
+                android:textColor="#6C6C6C"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginVertical="1dp"
+                android:background="#c7c7c7"/>
+
+            <!-- RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/todo_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/dark_blue"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:padding="8dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            android:text="총\n공부\n시간"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:padding="7dp"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/totalStudyTime"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="00시간 00분"
+                android:textSize="37dp"
+                android:layout_gravity="center"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@android:color/transparent"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+        app:itemIconTint="@color/bottom_nav_color_selector"
+        app:itemTextColor="@color/bottom_nav_color_selector"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemIconSize="60dp"
+        app:labelVisibilityMode="unlabeled"/>
+
+</LinearLayout>

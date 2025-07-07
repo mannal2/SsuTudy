@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="300dp"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            style="@style/Dialog.Title"
+            android:text="  친구 요청" />
+        <ImageButton
+            android:id="@+id/dialog_close_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/close_icon"
+            android:layout_marginLeft="-55dp"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="@color/medium_blue"/>
+
+    </LinearLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/friend_request_recycler_view"
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:scrollbars="vertical"
+        />
+    <TextView
+        android:id="@+id/empty_friend_request"
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:text="친구 요청이 없습니다."
+        android:textColor="@color/gray"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"/>
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:weightSum="5">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:src="@drawable/ssutudy_big"
+        android:layout_weight="1"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_margin="10dp"
+        android:background="#c7c7c7"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:src="@drawable/logo"
+            android:layout_marginTop="100dp"
+            android:id="@+id/logo"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="유세인트 로그인"
+            android:layout_below="@id/logo"
+            android:gravity="center_horizontal"
+            android:textSize="32sp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/usaint"/>
+
+        <WebView
+            android:layout_width="240dp"
+            android:layout_height="200dp"
+            android:id="@+id/webview"
+            android:layout_below="@+id/usaint"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edittext_border"
+            />
+
+        <EditText
+            android:layout_width="240dp"
+            android:layout_height="34dp"
+            android:layout_below="@+id/webview"
+            android:hint="  학번"
+            android:inputType="number"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/edittext_border"
+            android:id="@+id/student_number"/>
+
+        <EditText
+            android:layout_width="240dp"
+            android:layout_height="34dp"
+            android:layout_below="@+id/student_number"
+            android:hint="  비밀번호"
+            android:inputType="textPassword"
+            android:layout_marginTop="12dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/edittext_border"
+            android:id="@+id/password"/>
+
+        <android.widget.Button
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:background="@drawable/loginbutton_border"
+            android:text="로그인"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="100dp"
+            android:id="@+id/login"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

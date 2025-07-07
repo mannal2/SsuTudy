@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_marginTop="1dp"
+    android:background="?attr/selectableItemBackground">
+
+    <!-- 체크박스 -->
+    <CheckBox
+        android:id="@+id/todo_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CustomCheckBox"
+        android:layout_gravity="center_vertical" />
+
+    <!-- 할 일 이름 -->
+    <TextView
+        android:id="@+id/todo_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        android:text="할 일 이름"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:ellipsize="none"
+        android:scrollHorizontally="false"
+        android:singleLine="false"
+        android:layout_gravity="center_vertical" />
+
+    <!-- 수정 버튼 -->
+    <ImageButton
+        android:id="@+id/todo_edit_button"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/ic_edit"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_gravity="center_vertical"
+        android:scaleType="centerInside"
+        android:visibility="visible" />
+
+    <!-- 삭제 버튼 -->
+    <ImageButton
+        android:id="@+id/todo_delete_button"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/ic_delete"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_gravity="center_vertical"
+        android:scaleType="centerInside"
+        android:visibility="visible" />
+
+</LinearLayout>

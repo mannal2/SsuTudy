@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="?attr/selectableItemBackground">
+
+    <!-- To do Category -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/category_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- 카테고리 아이콘 -->
+        <ImageView
+            android:id="@+id/ic_category"
+            android:layout_marginStart="7dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_custom_category" />
+
+        <!-- 카테고리 이름 -->
+        <TextView
+            android:id="@+id/category_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="카테고리"
+            android:textSize="14sp" />
+
+        <!-- 추가 버튼 -->
+        <ImageButton
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="4dp"
+            android:id="@+id/add_todo_button"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="3dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/add_icon" />
+    </LinearLayout>
+
+    <!-- 할 일 목록 RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/todo_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:scrollbars="none"
+        android:nestedScrollingEnabled="false" />
+</LinearLayout>

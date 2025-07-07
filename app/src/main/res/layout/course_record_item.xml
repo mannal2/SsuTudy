@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginVertical="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(1122334455)"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="13sp"
+            android:id="@+id/course_number"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사용자 인터페이스 및 실습"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:id="@+id/course_name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="80 Min"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignBaseline="@+id/course_name"
+            android:layout_marginEnd="10dp"
+            android:textSize="16sp"
+            android:id="@+id/course_studytime"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonSet"
+        android:visibility="gone">
+
+        <android.widget.Button
+            android:id="@+id/to_rank"
+            style="@style/Button.DarkBlue"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="70dp"
+            android:text="랭킹 보기"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp"
+            />
+
+        <android.widget.Button
+            android:id="@+id/to_watch"
+            style="@style/Button.MediumBlue"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="70dp"
+            android:text="기록하기"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            />
+
+    </RelativeLayout>
+</LinearLayout>

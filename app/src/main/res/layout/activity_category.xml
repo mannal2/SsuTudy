@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include layout="@layout/base_layout"/>
+    <TextView
+        style="@style/Button.SettingsMenu"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="70dp"
+        android:text="카테고리 관리"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/category_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="150dp"
+        android:scrollbars="vertical"
+        />
+    <ImageButton
+        android:id="@+id/add_category_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="330dp"
+        android:layout_marginTop="570dp"
+        android:background="@drawable/add_icon_blue"
+        />
+</FrameLayout>

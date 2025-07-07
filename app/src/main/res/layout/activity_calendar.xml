@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ssutudy_big" />
+
+
+    <!-- 스크롤 영역 시작 -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="8dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                android:id="@+id/calendar_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:theme="@style/CalenderViewCustom"
+                app:mcv_selectionColor="@color/light_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:mcv_dateTextAppearance="@style/CalenderViewDateCustomText"
+                app:mcv_firstDayOfWeek="sunday"
+                app:mcv_selectionMode="single"
+                app:mcv_showOtherDates="out_of_range"
+                app:mcv_headerTextAppearance="@style/CalendarWidgetHeader"
+                app:mcv_weekDayTextAppearance="@style/CalenderViewWeekCustomText" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/calendar_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_marginStart="7dp"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_calendaricon" />
+
+                <TextView
+                    android:id="@+id/selected_class_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="강의 일정"
+                    android:textColor="@color/white"/>
+
+                <ImageButton
+                    android:id="@+id/add_class_schedule"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="4dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="3dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/add_icon" />
+
+            </LinearLayout>
+
+            <!-- 강의 목록 RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/class_schedule_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:padding="8dp"
+                android:scrollbars="vertical" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/calendar_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_marginStart="7dp"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_calendaricon" />
+
+                <TextView
+                    android:id="@+id/selected_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="일정"
+                    android:textColor="@color/white"/>
+
+                <ImageButton
+                    android:id="@+id/add_schedule"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="4dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="3dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/add_icon" />
+            </LinearLayout>
+
+            <!-- 할 일 목록 RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/schedule_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:padding="8dp"
+                android:scrollbars="vertical" />
+
+            <!-- 카테고리 RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/category_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbars="vertical"
+                android:nestedScrollingEnabled="false" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@android:color/transparent"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+        app:itemIconTint="@color/bottom_nav_color_selector"
+        app:itemTextColor="@color/bottom_nav_color_selector"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemIconSize="60dp"
+        app:labelVisibilityMode="unlabeled"/>
+
+</LinearLayout>
