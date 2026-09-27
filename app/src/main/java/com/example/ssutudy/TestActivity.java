@@ -38,8 +38,8 @@ public class TestActivity extends AppCompatActivity {
 
         dan=0;
         step=0;
-        int studentNum = 20212985;
-        String pw = "ssut1!";
+        int studentNum = 20210000;
+        String pw = "0000!";
         String name;
 
 
